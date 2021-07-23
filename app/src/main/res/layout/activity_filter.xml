@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".FilterActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        >
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/toolbar_title_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:drawablePadding="15dp"
+
+                android:drawableLeft="@drawable/ic_keyboard_backspace_black_24dp"
+
+                android:textSize="17sp"
+                android:gravity="right"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:drawablePadding="15dp"
+android:layout_alignParentRight="true"
+
+                android:fontFamily="@font/open_sans"
+                android:text="Clear All "
+                android:textSize="17sp"
+                android:gravity="right"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:background="@color/greyish"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+android:background="@color/colorAccent"
+        android:id="@+id/applyfilter"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:id="@+id/filterrr"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Filter Apply"
+android:textColor="@color/white"
+                android:textSize="18dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:background="#D4D4D4"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:background="@color/colorAccent"
+                    android:text="Financial Year"
+android:id="@+id/yearr"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Area"
+android:id="@+id/areaaa"
+                    android:textSize="18dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:text="Nidhi"
+android:id="@+id/nidhii"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textcl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:drawablePadding="15dp"
+
+
+                    android:fontFamily="@font/open_sans"
+                    android:text="Clear"
+                    android:textSize="14sp"
+                    android:gravity="right"
+                    android:paddingRight="20dp"
+                    android:textColor="@color/colorAccent"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/year_recycler"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/area_recycler"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/nidhi_recycler"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

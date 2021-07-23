@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_height="wrap_content">
+
+<!--
+    <ProgressBar
+        android:id="@+id/gif"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="visible" >
+    </ProgressBar>
+-->
+
+    <ProgressBar
+        android:id="@+id/gif"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_margin="2dp"/>
+
+
+    <!--android:indeterminateDrawable="@drawable/custom_progress_dialog"
+    android:indeterminate="true"-->
+
+<!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gif"
+        android:textSize="17dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/greennew"
+        android:text="Fetching..."/>
+-->
+
+
+
+</RelativeLayout>

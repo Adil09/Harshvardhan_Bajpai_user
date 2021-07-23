@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.harshvardhanbajpai">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.prabharilist.PrabharilistActivity"></activity>
+        <activity
+            android:name=".ui.votercardapply.VotercardApplyActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".FilterActivity" />
+        <activity
+            android:name=".Development"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".CameraVideo" />
+        <activity android:name=".ListProgram" />
+        <activity android:name=".ConMessage" />
+        <activity android:name=".History" />
+        <activity android:name=".Questions" />
+        <activity android:name=".Contactus" />
+        <activity android:name=".MyProfile" />
+        <activity android:name=".TashHoli" />
+        <activity android:name=".ViewFullImage" />
+        <activity android:name=".ComplainHistory" />
+        <activity android:name=".SocialMedia" />
+        <activity android:name=".ViewAllPhoto" />
+        <activity android:name=".ReplyActivity" />
+        <activity android:name=".AboutHarsh" />
+        <activity
+            android:name=".NewMember"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Register" />
+        <activity android:name=".Login" />
+        <activity android:name=".PhotoGallery" />
+        <activity android:name=".Confidantal" />
+        <activity android:name=".VideoShow" />
+        <activity android:name=".Holidays" />
+        <activity android:name=".ComComplainHistory" />
+        <activity android:name=".QUESTIONComplainHistory" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Complaint" />
+        <activity android:name=".Home" />
+        <activity
+            android:name="io.github.memfis19.annca.internal.ui.preview.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen" />
+        <activity android:name=".CustomCamera2Activity" />
+        <activity
+            android:name="io.github.memfis19.annca.internal.ui.camera.Camera1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen" />
+        <activity
+            android:name="io.github.memfis19.annca.internal.ui.camera2.Camera2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeFullscreen" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".OTPPage" />
+    </application>
+
+</manifest>
